@@ -13,14 +13,21 @@
         <module>lexington-application</module>
         <module>lexington-domain</module>
         <module>lexington-infrastructure</module>
+        <module>lexington-boot</module>
     </modules>
-    <dependencyManagement>
         <dependencies>
             <!--Alibaba cloud-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${nacos-version}</version>
+            </dependency>
+
+            <!--spring-web-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-version}</version>
             </dependency>
 
             <!-- springboot -->
@@ -30,15 +37,14 @@
                 <version>${spring-version}</version>
             </dependency>
 
-            <!-- spring-cloud -->
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter</artifactId>
-                <version>${spring-cloud-version}</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>RELEASE</version>
+                <scope>compile</scope>
             </dependency>
 
         </dependencies>
-    </dependencyManagement>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
